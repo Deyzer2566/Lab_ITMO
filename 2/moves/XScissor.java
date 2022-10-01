@@ -1,4 +1,4 @@
-spackage moves;
+package moves;
 import ru.ifmo.se.pokemon.*;
 public class XScissor extends PhysicalMove{
 	public XScissor(){

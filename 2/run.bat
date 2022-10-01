@@ -1,0 +1,1 @@
+java -cp Pokemon.jar; Lab2
