@@ -5,6 +5,6 @@ public class Pound extends PhysicalMove{
 		super(Type.NORMAL,40,100);
 	}
 	protected String describe(){
-		return "использовал pound";//?!?!
+		return "РёСЃРїРѕР»СЊР·РѕРІР°Р» pound";//?!?!
 	}
 }

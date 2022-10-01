@@ -10,6 +10,6 @@ public class Rest extends StatusMove{
 	}
 	
 	protected String describe() {
-        return "чиллит";
+        return "С‡РёР»Р»РёС‚";
     }
 }

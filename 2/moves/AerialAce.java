@@ -5,6 +5,6 @@ public class AerialAce extends PhysicalMove{
 		super(Type.FLYING,60,Double.POSITIVE_INFINITY);
 	}
 	protected String describe(){
-		return "использовал Aerial Ace";
+		return "РёСЃРїРѕР»СЊР·РѕРІР°Р» Aerial Ace";
 	}
 }

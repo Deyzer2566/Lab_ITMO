@@ -10,6 +10,6 @@ public class FeintAttack extends PhysicalMove{
     // }
 	
 	protected String describe(){
-		return "применил FeintAttack";
+		return "РїСЂРёРјРµРЅРёР» FeintAttack";
 	}
 }

@@ -9,6 +9,6 @@ public class IceBeam extends SpecialMove{
 	}
 		
 	protected String describe(){
-		return "выпустил ледяной луч";
+		return "РІС‹РїСѓСЃС‚РёР» Р»РµРґСЏРЅРѕР№ Р»СѓС‡";
 	}
 }

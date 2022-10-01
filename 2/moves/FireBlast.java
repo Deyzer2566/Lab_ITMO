@@ -11,6 +11,6 @@ public class FireBlast extends SpecialMove {
 	}
 	
 	protected String describe() {
-		return "использовал Fire Blast";
+		return "РёСЃРїРѕР»СЊР·РѕРІР°Р» Fire Blast";
 	}
 }

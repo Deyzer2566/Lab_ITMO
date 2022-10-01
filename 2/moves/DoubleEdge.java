@@ -8,6 +8,6 @@ public class DoubleEdge extends PhysicalMove{
 		att.setMod(Stat.HP,(int)(damage/3.0));
 	}
 	protected String describe(){
-		return "использовал двойное лезвие";
+		return "РёСЃРїРѕР»СЊР·РѕРІР°Р» РґРІРѕР№РЅРѕРµ Р»РµР·РІРёРµ";
 	}
 }

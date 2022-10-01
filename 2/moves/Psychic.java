@@ -8,6 +8,6 @@ public class Psychic extends SpecialMove{
 		p.addEffect(new Effect().chance(0.1).turns(1).stat(Stat.SPECIAL_DEFENSE,-1));
 	}
 	protected String describe(){
-		return "устроил мозговой штурм";
+		return "СѓСЃС‚СЂРѕРёР» РјРѕР·РіРѕРІРѕР№ С€С‚СѓСЂРј";
 	}
 }

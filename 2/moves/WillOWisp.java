@@ -5,7 +5,7 @@ public class WillOWisp extends StatusMove{
 		super(Type.FIRE,0,85);
 	}
 	protected String describe(){
-		return "σλόςΰνσλ WillOWisp";
+		return "ΡƒΠ»ΡΡ‚Π°Π½ΡƒΠ» WillOWisp";
 	}
 	protected void applyOppEffects(Pokemon p){
 		Effect.burn(p);

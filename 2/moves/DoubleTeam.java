@@ -12,6 +12,6 @@ public class DoubleTeam extends StatusMove{
 	}
 	
 	protected String describe(){
-		return "раздвоился";
+		return "СЂР°Р·РґРІРѕРёР»СЃСЏ";
 	}
 }

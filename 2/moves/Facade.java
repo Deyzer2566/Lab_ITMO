@@ -19,6 +19,6 @@ public class Facade extends PhysicalMove {
     }
 
     public String describe(){
-        return "применл facade";
+        return "РїСЂРёРјРµРЅР» facade";
     }
 }
