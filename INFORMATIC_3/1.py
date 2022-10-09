@@ -1,15 +1,14 @@
-import re#8 -{ )
 import random
 isu = 367298
 eye = [':',';','X','8','=']
 nose = ['-','<','-{','<{']
 mouth = ['(',')','O','|','\\','/','P']
 my_smile = eye[isu%5]+nose[isu%4]+mouth[isu%7]
-print('my smile:',my_smile)
+print('мой смайлик:',my_smile)
 def gen():#генерация тестов
     s = []
     count = 0
-    for i in range(40):
+    for i in range(20):
         if random.randint(0,8)==3:
             s.extend(my_smile)
             count+=1
@@ -24,5 +23,6 @@ def gen():#генерация тестов
 test=[]
 for i in range(10):
     test += [gen()]
+print('Вывод программы   Правильный ответ')
 for i in range(10):
-    print(test[i][0].count(my_smile), test[i][1])
+    print('       ',test[i][0].count(my_smile),'              ', test[i][1])
