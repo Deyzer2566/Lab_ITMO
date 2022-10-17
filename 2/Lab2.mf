@@ -1,2 +1,2 @@
-Main-Class:IDK
-Class-Path:Pokemon.jar
+Main-Class: Lab2
+Class-Path: Pokemon.jar
