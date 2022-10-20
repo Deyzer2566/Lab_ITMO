@@ -28,7 +28,7 @@ for h,i in enumerate(test):
                     del l[k]
                     continue
             l[k]=j[0]+(('-'+j[1]) if j[1]!='' else '')+' '+j[2]+'.'+j[3]+". "+j[4]
-        print("Тест ",h)
+        print("Тест:",h)
         for k in range(len(i[0])):
             print(i[0][k],((' '*5+l[k]) if k < len(l) else ""))
         print(l == list(i[1]))
