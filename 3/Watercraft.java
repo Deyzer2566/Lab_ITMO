@@ -1,11 +1,18 @@
-public abstract class Watercraft implements Swimmable{
+public enum Watercraft implements Swimmable,Lookable{
+    BOAT{
+        @Override
+        public String toString(){
+            return "лодка";
+        }
+    },
+    POT{
+        @Override
+        public String toString(){
+            return "Плавучий Медведь";
+        }
+    };
     @Override
-    public boolean equals(Object obj) {
-        return this.getClass().equals(obj.getClass());
-    }
-
-    @Override
-    public int hashCode() {
-        return 0x37765856+getClass().toString().length()+toString().length()*4;
+    public void beLooked(){
+        System.out.println(this.toString()+" все еще плавает");
     }
 }
