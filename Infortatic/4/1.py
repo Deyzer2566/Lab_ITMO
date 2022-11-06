@@ -86,14 +86,14 @@ def parseObject(s:str):
 def fromArrayToXML(l:list,lvl:int):
     ret=''
     for k,j in enumerate(l):
-        ret += ' '*lvl+'<'+str(k)+'>'
+        ret += ' '*lvl+'<elem'+str(k)+'>'
         if type(j) is list:
             ret += '\n'+fromArrayToXML(j,lvl+1)+'\n'+' '*lvl
         elif type(j) is dict:
             ret += '\n'+toXML(j,lvl+1)+'\n'+' '*lvl
         else:
             ret += str(j)
-        ret += '</'+str(k)+'>' + '\n'
+        ret += '</elem'+str(k)+'>' + '\n'
     return ret
 
 def toXML(s:dict,lvl:int):
