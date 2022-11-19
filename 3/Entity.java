@@ -20,6 +20,6 @@ public abstract class Entity implements CanLook, Lookable{
 
     @Override
     public int hashCode() {
-        return getClass().toString().length()+0x36455553+toString().length();
+        return getClass().toString().length()+0x36485553+toString().length();
     }
 }
