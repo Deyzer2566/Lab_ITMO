@@ -13,6 +13,6 @@ public enum Watercraft implements Swimmable,Lookable{
     };
     @Override
     public void lookAtIt(){
-        System.out.println(this.toString()+" все еще плавает");
+        this.swim();
     }
 }
