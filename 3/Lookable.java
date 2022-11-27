@@ -1,5 +1,5 @@
 public interface Lookable {
-    default void beLooked(){
+    default void lookAtIt(){
         System.out.println("На "+toString()+" смотрят");
     }
 }

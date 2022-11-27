@@ -3,4 +3,5 @@ public class Christopher extends Entity implements CanThink {
     public String toString() {
         return "Кристофер Робин";
     }
+
 }

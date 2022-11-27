@@ -1,14 +1,5 @@
 public abstract class Entity implements CanLook, Lookable{
     @Override
-    public void beLooked(){}
-
-    @Override
-    public void lookAt(Lookable obj){
-        System.out.println(this.toString() + " смотрит на " + obj.toString());
-        obj.beLooked();
-    }
-
-    @Override
     public String toString(){
         return "кто-то";
     }
