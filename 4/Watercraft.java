@@ -2,37 +2,60 @@ public enum Watercraft implements Swimmable,Lookable{
     BOAT{
         @Override
         public String toString(){
-            return "лодка";
+            return "Р»РѕРґРєР°";
         }
     },
     POT{
         @Override
         public String toString(){
-            return "Плавучий Медведь";
+            return "РџР»Р°РІСѓС‡РёР№ РњРµРґРІРµРґСЊ";
         }
     },
 	UMBRELLA{
 		@Override
 		public String toString(){
-			return "зонтик";
+			return "Р·РѕРЅС‚РёРє";
 		}
 	};
-	
-	private Entity[] passengers;
 	
     @Override
     public void lookAtIt(){
         this.swim();
     }
 	
-	public void getOn(Entity[] passengers) throws WatercraftIsSmall, BoatIsOutweighed{
-		if(this == POT){
-			throw new WatercraftIsSmall(this.toString()+" не подходит для плавания!");
+	class Boat implements Swimmable{
+		private Entity[] passengers;
+		
+		@Override
+		public void swim(){
+			System.out.println(toString() + "РїР»Р°РІР°РµС‚");
 		}
-		if(passengers.length % 2 != 0){
-			throw new BoatIsOutweighed(this.toString()+" перевешен!");
+		
+		public void drop(Entity entity) throws ThereIsNotThePassenger{
+			int index = 0;
+			for(;index<passengers.length;index++)
+				if (passengers[index]==entity){
+					break;
+				}
+			if (index == passengers.length){
+				throw new ThereIsNotThePassenger("РўСѓС‚ РµРіРѕ РЅРµС‚!");
+			}
+			System.out.println(entity.toString() + "СѓРїР°Р» РІ РІРѕРґСѓ");
 		}
-		this.passengers=passengers;
-		System.out.println("Все успешно забрались в "+this.toString()+" "+this.passengers.length);
+		
+		public void getOn(Entity[] passengers) throws WatercraftIsSmall, BoatIsOutweighed{
+			this.passengers=passengers;
+			if(Watercraft.this == POT){
+				throw new WatercraftIsSmall(this.toString()+" РЅРµ РїРѕРґС…РѕРґРёС‚ РґР»СЏ РїР»Р°РІР°РЅРёСЏ!");
+			}
+			if(this.passengers.length % 2 != 0){
+				for(Entity en:this.passengers){
+					this.drop(en);
+				}
+				throw new BoatIsOutweighed(this.toString()+" РїРµСЂРµРІРµС€РµРЅ!");
+			}
+			System.out.println("Р’СЃРµ СѓСЃРїРµС€РЅРѕ Р·Р°Р±СЂР°Р»РёСЃСЊ РІ "+Watercraft.this.toString());
+		}
 	}
+	Boat theThinkThatSwims = new Boat();
 }
