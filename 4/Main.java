@@ -44,5 +44,6 @@ public class Main {
 		}catch(WatercraftIsSmall wis){
 			System.out.println(wis.getMessage());
 		}
+		umbrella.swim();
     }
 }

@@ -40,11 +40,16 @@ public enum Watercraft implements Swimmable,Lookable{
 			if (index == passengers.length){
 				throw new ThereIsNotThePassenger("Тут его нет!");
 			}
-			System.out.println(entity.toString() + "упал в воду");
+			System.out.println(entity.toString() + " упал в воду");
 		}
 		
 		public void getOn(Entity[] passengers) throws WatercraftIsSmall, BoatIsOutweighed{
 			this.passengers=passengers;
+			System.out.println("В "+Watercraft.this.toString()+" забрались:");
+			for(Entity en:passengers){
+				System.out.print(en.toString()+", ");
+			}
+			System.out.println();
 			if(Watercraft.this == POT){
 				throw new WatercraftIsSmall(this.toString()+" не подходит для плавания!");
 			}
@@ -52,7 +57,7 @@ public enum Watercraft implements Swimmable,Lookable{
 				for(Entity en:this.passengers){
 					this.drop(en);
 				}
-				throw new BoatIsOutweighed(this.toString()+" перевешен!");
+				throw new BoatIsOutweighed(Watercraft.this.toString()+" перевешен!");
 			}
 			System.out.println("Все успешно забрались в "+Watercraft.this.toString());
 		}

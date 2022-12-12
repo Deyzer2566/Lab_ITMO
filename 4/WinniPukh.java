@@ -1,7 +1,7 @@
 import java.util.Random;
 public class WinniPukh extends Entity implements Thinkable{
 
-	private static String [] names = {"Винни-Пух","Друг Пятачка","Приятель Кролика","Открыватель Полюса","Утешитель Иа-Иа и Находитель Хвоста"};
+	private static String [] names = {"Р’РёРЅРЅРё-РџСѓС…","Р”СЂСѓРі РџСЏС‚Р°С‡РєР°","РџСЂРёСЏС‚РµР»СЊ РљСЂРѕР»РёРєР°","РћС‚РєСЂС‹РІР°С‚РµР»СЊ РџРѕР»СЋСЃР°","РЈС‚РµС€РёС‚РµР»СЊ РР°-РР° Рё РќР°С…РѕРґРёС‚РµР»СЊ РҐРІРѕСЃС‚Р°"};
 	
     @Override
     public String toString(){
@@ -13,16 +13,16 @@ public class WinniPukh extends Entity implements Thinkable{
 
     @Override
     public void thinkAboutIt() {
-        System.out.println(this.toString()+" стыдится");
+        System.out.println(this.toString()+" СЃС‚С‹РґРёС‚СЃСЏ");
     }
 	
 	public void saySomethingSmart(){
 		class SmartThing{
-			private String text = "мудрая вещь";
+			private String text = "РјСѓРґСЂР°СЏ РІРµС‰СЊ";
 			
 			@Override
 			public String toString(){
-				return WinniPukh.this.toString() + " сказал "+text;
+				return WinniPukh.this.toString() + " СЃРєР°Р·Р°Р» "+text;
 			}
 		}
 		System.out.println(new SmartThing());
