@@ -48,7 +48,7 @@ def simple_iterations_method(matrix: list, b: list, epsilon):
         if a[j][j] == 0:
             return "0 в одной из диагональ!"
         elif sum(a[j]) > 2*a[j][j]:
-            return "Условие преобладания не выполнено!"
+            print("Условие преобладания не выполнено!")
         elif sum(a[j]) < 2*a[j][j]:
             oneIsStrong = True
     if not oneIsStrong:
@@ -69,7 +69,7 @@ def simple_iterations_method(matrix: list, b: list, epsilon):
     iterations = 0
     print('\t'.join(['№']+['x'+str(i) for i in range(1,n+1)]+['max(x^k-x^k-1)']))
     print('\t'.join(['0']+list(map(str,x))+['-']))
-    while error > epsilon:
+    while error > epsilon and iterations < 1000:
         x1 = [0 for j in range(n)]
         for i in range(n):
             for j in range(n):
@@ -80,11 +80,20 @@ def simple_iterations_method(matrix: list, b: list, epsilon):
         x = x1
         iterations += 1
         print('\t'.join([str(iterations)]+list(map(lambda x: "{:.4f}".format(x),x))+["{:.4f}".format(error)]))
-    return x
-with open('test.txt', 'r') as f:
-    n = int(f.readline())
+    return [x[i] for i in columns]
+print('Ввод в консоль (1) или из файла(2) ?')
+mode = input('?>')
+if(mode == '1'):
+    n = int(input())
     a = []
     for j in range(n):
-        a.append(list(map(int, f.readline().split())))
-    b = list(map(int, f.readline().split()))
-    print(simple_iterations_method(a,b, 1e-2))
+        a.append(list(map(int, input().split())))
+    b = list(map(int, input().split()))
+else:
+    with open(input('Имя файла?'), 'r') as f:    
+        n = int(f.readline())
+        a = []
+        for j in range(n):
+            a.append(list(map(int, f.readline().split())))
+        b = list(map(int, f.readline().split()))
+print(simple_iterations_method(a,b, 1e-2))
